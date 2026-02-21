@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome Back</title>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family: 'Times New Roman', sans-serif;
+    }
+    body{
+        height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background:gray;
+        flex-direction:column;
+    }
+    .vijay{
+        width:650px;
+        height:420px;
+        background:url("vijay_copy.jpg") center/cover no-repeat;
+        border-radius:25px;
+        padding:40px;
+        position:relative;
+        background-position: top;
+        overflow:hidden;
+    }
+    .vijay::before{
+        position:absolute;
+    }
+      .content{
+        position:relative;
+        z-index:2;
+        text-align:center;
+        margin-top:20px;
+    }
+    h1{
+        color:white;
+        font-size:40px;
+        font-weight:700;
+        text-shadow:2px 4px 10px rgba(0,0,0,0.6);
+        margin-bottom:30px;
+    }
+    .input-box{
+        width:100%;
+        margin:15px 0;
+    }
+
+    .input-box input{
+        width:100%;
+        padding:15px;
+        border:none;
+        outline:none;
+        border-radius:12px;
+        background:rgba(255,255,255,0.3);
+        color:white;
+        font-size:16px;
+        backdrop-filter: blur(5px);
+    }
+
+    .input-box input::placeholder{
+        color:#eee;
+    }
+
+    .btn{
+        margin-top:20px;
+        width:100%;
+        padding:15px;
+        border:none;
+        border-radius:15px;
+        background:#81b4c7;
+        color:white;
+        font-size:18px;
+        font-weight:600;
+        cursor:pointer;
+        transition:0.3s;
+        box-shadow:0 8px 20px rgba(0,0,0,0.3);
+    }
+    a{text-decoration: none;
+        color: #eee;
+
+    }
+    .character{
+        margin-top:30px;
+    }
+
+    .character img{
+        width:200px;
+    }
+
+</style>
+</head>
+
+<body>
+
+    <div class="vijay">
+        <div class="content">
+            <h1>WELCOME</h1>
+
+            <div class="input-box">
+                <input id="yn" type="text" placeholder="Your_name">
+            </div>
+
+            <div class="input-box">
+                <input id="pwd" type="password" placeholder="Password">
+            </div>
+
+            <button onclick="check()" class="btn">SUBMIT</button>
+        </div>
+        
+    </div>
+    <div class="character">
+        <img src="D:\Project\vijaya\Line Stickers & Themes.gif" alt="GIF">
+    </div>
+    <script>
+        function check(){
+            var YN = document.getElementById("yn").value;
+            var PWD = document.getElementById("pwd").value;
+            if(YN == "vijay" && PWD == "1234"){
+                window.location.replace("wish.html")
+            }
+            else{
+                alert("WRONG NAME AND WRONG PASSWORD BRO")
+            }
+        }
+    </script>
+
+</body>
+</html>
